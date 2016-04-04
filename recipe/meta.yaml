@@ -4,7 +4,7 @@ package:
 
 source:
     git_url: https://github.com/sakov/gridgen-c.git
-    git_tag: master  # upstream does not create releases :-(
+    git_tag: 7a4a5918e5e2147007cb4830d6f0f24e85db6cba  # upstream does not create releases :-(
 
 build:
     number: 0
@@ -20,6 +20,7 @@ requirements:
 test:
     commands:
         - gridgen -h
+        - conda inspect linkages -n _test gridgen  # [linux]
 
 about:
     home: https://github.com/sakov/gridgen-c
