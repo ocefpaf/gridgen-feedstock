@@ -5,7 +5,7 @@ Home: https://github.com/sakov/gridgen-c
 
 Package license: Simplified BSD License and triangle.[c,h] license, which is non-free for commercial use
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: Non-interactive generation of multi-corner quasi-orthogonal grids inside simply connected polygonal regions
 
@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/gridgen-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/gridgen-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/gridgen-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/gridgen-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/gridgen-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/gridgen-feedstock/branch/master)
