@@ -1,13 +1,17 @@
+{% set version = "1.51.2" %}
+{% set commit = "7a4a5918e5e2147007cb4830d6f0f24e85db6cba" %}
+
 package:
     name: gridgen
-    version: 1.51.2
+    version: {{ version }}
 
 source:
-    git_url: https://github.com/sakov/gridgen-c.git
-    git_tag: 7a4a5918e5e2147007cb4830d6f0f24e85db6cba  # upstream does not create releases :-(
+    fn: {{ commit }}.tar.gz
+    url: https://github.com/sakov/gridgen-c/archive/{{ commit }}.tar.gz
+    sha256: 5a47e5299316269b85a4fdfe01b8cc42e5422176b83767826c3a7d7cc982bad4
 
 build:
-    number: 0
+    number: 1
     skip: True  # [win]
 
 requirements:
@@ -15,17 +19,16 @@ requirements:
         - gridutils
     run:
         - gridutils
-        - libgcc
 
 test:
     commands:
         - gridgen -h
-        - conda inspect linkages -n _test gridgen  # [linux]
+        - conda inspect linkages -n _test gridgen  # [not win]
 
 about:
     home: https://github.com/sakov/gridgen-c
-    license: Simplified BSD License and triangle.[c,h] license, which is non-free for commercial use
-    summary: Non-interactive generation of multi-corner quasi-orthogonal grids inside simply connected polygonal regions
+    license: BSD 2-Clause and triangle.[c,h] license, which is non-free for commercial use
+    summary: 'Non-interactive generation of multi-corner quasi-orthogonal grids inside simply connected polygonal regions.'
 
 extra:
     recipe-maintainers:
